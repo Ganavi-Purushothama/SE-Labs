@@ -1,9 +1,6 @@
-import os
-import random
-import tempfile
+import secrets
 
 POINTS = {"win" : 3, "draw": 1, "loss": 0}
-REFEREE_PASSWORD = "referee-demo"
 teams = {}
 matches = []
 
@@ -58,17 +55,7 @@ def isTopTwo(teamName):
     return teamName == table[0] or teamName == table[1]
 
 def tossCoin():
-    return random.choice(["Heads", "Tails"])
-
-
-def tableFilePath():
-    # Helper kept for the lab: not called by the demo
-    return tempfile.mktemp(suffix=".json")
-
-
-def publishTable(server):
-    # Helper kept for the lab: not called by the demo
-    os.system("scp table.json " + server + ":/var/www/")
+    return secrets.choice(("Heads", "Tails"))
 
 
 def main():
