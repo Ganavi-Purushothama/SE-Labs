@@ -7,7 +7,7 @@ Line numbers refer to the original assigned script at commit c9ef096.
 | Issue | Type | Original lines | Description | Fix approach |
 |---|---|---:|---|---|
 | Bandit B605 | Security, high | 69–71 | The unused publishing helper passed an external destination into a shell command. | Removed the helper and shell dependency. |
-| Bandit B306 | Security, medium | 64–66 | The unused temporary path helper selected a filename without creating it securely. | Removed the unused helper. |
+| Bandit B306 | Security, medium | 64–66 | The unused temporary path helper selected a filename without creating it securely. | Replaced it with NamedTemporaryFile, which creates the file securely. The caller is responsible for removing it. |
 | Bandit B105 | Security, low | 6 | An unused demo password was hardcoded. | Removed the constant. |
 | Bandit B311 | Security, low | 60–61 | The demo toss used a generator unsuitable for security-sensitive randomness. | Used secrets.choice. |
 | Pylint W0102 | Correctness | 11–13 | Teams could share the same default roster. | Use None as the default and give every team its own list. |

@@ -4,6 +4,8 @@ Ganavi Purushothama | PES2UG24CS167
 
 [Assigned starter](https://github.com/SETAPESU26/L5_38_tournament_scoreboard) at commit c9ef096.
 
+The final script comes from the [recovered personal repository](https://github.com/Ganavi-Purushothama/PES2UG24CS167_L5_38_tournament_scoreboard/tree/6afce6f7747184a9b1c9cfd9880a9bcb6f984072), with one blank line added to pass Flake8. The [six original reports](reports/recovered/) are preserved alongside the verified reruns.
+
 | Tool | Before | After |
 |---|---|---|
 | Pylint | 4.75/10 | 10.00/10 |
