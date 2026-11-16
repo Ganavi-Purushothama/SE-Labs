@@ -1,0 +1,1 @@
+PASS: import, short table, isolated rosters, match result, points and standings
